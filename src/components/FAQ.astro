@@ -1,0 +1,75 @@
+---
+const faqs = [
+  {
+    question: "How much can I save with solar?",
+    answer:
+      "Savings depend on your usage and system size, but most customers see significant reductions on their power bills from day one."
+  },
+  {
+    question: "How long does installation take?",
+    answer:
+      "Most residential systems are installed within a single day once approvals are in place."
+  },
+  {
+    question: "Do you handle approvals and paperwork?",
+    answer:
+      "Yes. We manage all approvals, compliance paperwork and grid connection for you."
+  },
+  {
+    question: "What warranties do you offer?",
+    answer:
+      "We provide manufacturer warranties on equipment and workmanship warranty on installation."
+  }
+];
+---
+
+<section class="faqSection">
+  <div class="faqContent">
+    <h2 class="faqTitle">Frequently Asked Questions</h2>
+
+    <div class="faqList">
+      {faqs.map((faq) => (
+        <details class="faqItem">
+          <summary class="faqQuestion">{faq.question}</summary>
+          <p class="faqAnswer">{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faqSection {
+    background-color: #ffffff;
+    padding: 80px 20px;
+  }
+
+  .faqContent {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faqTitle {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
+  }
+
+  .faqItem {
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .faqAnswer {
+    margin-top: 10px;
+    color: #555;
+  }
+</style>

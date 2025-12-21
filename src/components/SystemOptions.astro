@@ -1,0 +1,82 @@
+---
+const systems = [
+  {
+    size: "6.6kW",
+    idealFor: "Small homes",
+    text: "Perfect for low to medium energy usage."
+  },
+  {
+    size: "10kW",
+    idealFor: "Medium homes & businesses",
+    text: "Balanced option for higher daily consumption."
+  },
+  {
+    size: "13.2kW+",
+    idealFor: "Large homes & commercial",
+    text: "Designed for high usage and maximum savings."
+  }
+];
+---
+
+<section class="systemOptionsSection">
+  <div class="systemOptionsContent">
+    <h2 class="systemOptionsTitle">System Options</h2>
+
+    <div class="systemOptionsGrid">
+      {systems.map((system) => (
+        <div class="systemCard">
+          <h3 class="systemSize">{system.size}</h3>
+          <p class="systemIdealFor">{system.idealFor}</p>
+          <p class="systemText">{system.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .systemOptionsSection {
+    background-color: #ffffff;
+    padding: 80px 20px;
+  }
+
+  .systemOptionsContent {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .systemOptionsTitle {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  .systemOptionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .systemCard {
+    background-color: #f9f9f9;
+    padding: 28px;
+    border-radius: 8px;
+  }
+
+  .systemSize {
+    font-size: 22px;
+    color: #ff9800;
+    margin-bottom: 8px;
+  }
+
+  .systemIdealFor {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .systemText {
+    font-size: 15px;
+    color: #555;
+  }
+</style>

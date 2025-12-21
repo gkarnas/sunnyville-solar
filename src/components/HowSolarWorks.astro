@@ -1,0 +1,65 @@
+---
+const steps = [
+  {
+    title: "Solar Panels",
+    text: "Panels capture energy from the sun and generate DC electricity."
+  },
+  {
+    title: "Inverter",
+    text: "The inverter converts DC into AC power your home or business can use."
+  },
+  {
+    title: "Usage & Savings",
+    text: "You use solar energy first and reduce what you buy from the grid."
+  }
+];
+---
+
+<section class="howSolarWorksSection">
+  <div class="howSolarWorksContent">
+    <h2 class="howSolarWorksTitle">How Solar Works</h2>
+
+    <div class="howSolarWorksGrid">
+      {steps.map((step, index) => (
+        <div class="howSolarWorksCard">
+          <span class="stepNumber">{index + 1}</span>
+          <h3 class="stepTitle">{step.title}</h3>
+          <p class="stepText">{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .howSolarWorksSection {
+    background-color: #ffffff;
+    padding: 80px 20px;
+  }
+
+  .howSolarWorksContent {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .howSolarWorksTitle {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  .howSolarWorksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .howSolarWorksCard {
+    background-color: #f9f9f9;
+    padding: 28px;
+    border-radius: 8px;
+  }
+
+  .stepNumber {
+    display: inlin

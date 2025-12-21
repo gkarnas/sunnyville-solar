@@ -1,0 +1,77 @@
+---
+const credentials = [
+  {
+    title: "Licensed & Insured",
+    text: "Fully licensed electricians with all required Queensland certifications."
+  },
+  {
+    title: "CEC Approved",
+    text: "Clean Energy Council compliant systems and installations."
+  },
+  {
+    title: "Quality Workmanship",
+    text: "Clean installs, compliant wiring and attention to detail."
+  },
+  {
+    title: "Warranty & Support",
+    text: "Clear warranties and local after-sales support."
+  }
+];
+---
+
+<section class="qualityLicencesSection">
+  <div class="qualityLicencesContent">
+    <h2 class="qualityLicencesTitle">Quality & Licences</h2>
+
+    <div class="qualityLicencesGrid">
+      {credentials.map((item) => (
+        <div class="qualityCard">
+          <h3 class="qualityCardTitle">{item.title}</h3>
+          <p class="qualityCardText">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .qualityLicencesSection {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+  }
+
+  .qualityLicencesContent {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .qualityLicencesTitle {
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  .qualityLicencesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .qualityCard {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 8px;
+  }
+
+  .qualityCardTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff9800;
+  }
+
+  .qualityCardText {
+    font-size: 15px;
+    color: #555;
+  }
+</style>

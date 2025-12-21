@@ -1,0 +1,61 @@
+---
+const {
+  city = "Townsville",
+  experienceYears = "10+",
+  installationsCount = "500+"
+} = Astro.props;
+---
+
+<section class="localFocusSection">
+  <div class="localFocusContent">
+    <h2 class="localFocusTitle">
+      Local {city} Solar Experts
+    </h2>
+
+    <p class="localFocusText">
+      We are a local solar company with over {installationsCount} installations
+      and more than {experienceYears} years of hands-on experience in Queensland.
+    </p>
+
+    <ul class="localFocusList">
+      <li>✔ Local installer, not a call centre</li>
+      <li>✔ Fast installation timelines</li>
+      <li>✔ Clean, compliant and high-quality work</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .localFocusSection {
+    background-color: #ffffff;
+    padding: 80px 20px;
+  }
+
+  .localFocusContent {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .localFocusTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .localFocusText {
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .localFocusList {
+    list-style: none;
+    padding: 0;
+  }
+
+  .localFocusList li {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+</style>

@@ -1,0 +1,171 @@
+<section class="leadFormSection">
+  <div class="leadFormContent">
+    <h2 class="leadFormTitle">Get a Free Solar Quote</h2>
+
+    <form class="leadForm" id="leadForm">
+
+      <!-- Name -->
+      <input
+        type="text"
+        name="fullName"
+        class="formInput"
+        placeholder="Full name"
+        required
+      />
+
+      <!-- Phone -->
+      <input
+        type="tel"
+        name="phone"
+        class="formInput"
+        placeholder="Phone number"
+        required
+      />
+
+      <!-- Address -->
+        <div class="addressRow">
+        <input
+            type="text"
+            name="addressNumber"
+            class="formInput"
+            placeholder="Street number"
+        />
+
+        <input
+            type="text"
+            name="addressStreet"
+            class="formInput"
+            placeholder="Street name"
+        />
+        </div>
+
+        <div class="addressRow">
+        <input
+            type="text"
+            name="addressSuburb"
+            class="formInput"
+            placeholder="Suburb"
+        />
+
+        <input
+            type="text"
+            name="addressPostcode"
+            class="formInput"
+            placeholder="Postcode"
+        />
+        </div>
+
+
+      <!-- System size -->
+      <select name="systemInterest" class="formInput">
+        <option value="">System size</option>
+        <option value="6.6kW">6.6kW</option>
+        <option value="10kW">10kW</option>
+        <option value="13kWPlus">13kW+</option>
+        <option value="maxPossible">Largest possible</option>
+        <option value="notSure">Not sure yet</option>
+      </select>
+
+      <!-- Battery interest -->
+      <select name="batteryInterest" class="formInput">
+        <option value="">Battery interest</option>
+        <option value="yes">Yes, I’m interested in batteries</option>
+        <option value="no">No batteries</option>
+      </select>
+
+      <!-- Preferred install time -->
+      <input
+        type="text"
+        name="preferredInstallTime"
+        class="formInput"
+        placeholder="When would you like the system installed? (e.g. next week)"
+      />
+
+      <!-- Visit date & time -->
+      <label class="formLabel">
+        Preferred site visit date & time
+      </label>
+      <input
+        type="datetime-local"
+        name="preferredVisitDateTime"
+        class="formInput"
+      />
+
+      <!-- Confirmation note -->
+      <p class="visitNote">
+        We will call you as soon as possible to confirm the visit date,
+        time and exact address.
+      </p>
+
+      <button type="submit" class="leadFormButton">
+        Request Quote
+      </button>
+    </form>
+
+    <p class="leadFormNote">
+      No spam. Local team. Free assessment.
+    </p>
+  </div>
+</section>
+
+<style>
+  .leadFormSection {
+    background-color: #ff9800;
+    padding: 80px 20px;
+    color: white;
+  }
+
+  .leadFormContent {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .leadFormTitle {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .leadForm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formInput {
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+  }
+
+  .formLabel {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+  }
+
+  .visitNote {
+    font-size: 13px;
+    margin: 8px 0 18px;
+    opacity: 0.9;
+  }
+
+  .leadFormButton {
+    background-color: white;
+    color: #ff9800;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .leadFormNote {
+    margin-top: 16px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+</style>

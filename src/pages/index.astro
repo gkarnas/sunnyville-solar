@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import LocalFocus from "../components/LocalFocus.astro";
@@ -15,7 +16,10 @@ import Footer from "../components/Footer.astro";
 <script src="/scripts/leadFormClient.js" type="module"></script>
 
 <BaseLayout title="Sunnyville Solar | Townsville">
+  <Header />
   <Hero />
+  <section id="lead">
+  </section>
   <LeadForm />
   <LocalFocus />
   <Benefits />

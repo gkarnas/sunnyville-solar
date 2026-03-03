@@ -1,18 +1,32 @@
 <section class="leadFormSection">
   <div class="leadFormContent">
-    <h2 class="leadFormTitle">Book a quick home visit <br /> We`ll tailor the right solar system for you</h2>
+    <h2 class="leadFormTitle">
+      Book a Free Home Visit<br />
+      We'll design the right system for your home
+    </h2>
     <p class="subtitle">
-      No pressure. Local experts. At a time that suits you.
+      Local experts. At a time that suits you.
     </p>
 
-    <form class="leadForm" id="leadForm">
+    <form 
+      class="leadForm"
+      name="lead"
+      id="leadForm"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thank-you"
+    >
+      <!-- Required for Netlify -->
+      <input type="hidden" name="form-name" value="lead" />
+      <input type="hidden" name="bot-field" />
 
       <!-- Name -->
       <input
         type="text"
         name="name"
         class="formInput"
-        placeholder="Full name"
+        placeholder="Name"
         required
       />
 
@@ -26,88 +40,30 @@
       />
 
       <!-- Address -->
-        <div class="addressRow">
-        <input
-            type="text"
-            name="addressNumber"
-            class="formInput"
-            placeholder="Street number"
-            
-        />
-
-        <input
-            type="text"
-            name="addressStreet"
-            class="formInput"
-            placeholder="Street name"
-        />
-        </div>
-
-        <div class="addressRow">
-        <input
-            type="text"
-            name="addressSuburb"
-            class="formInput"
-            placeholder="Suburb"
-        />
-
-        <input
-            type="text"
-            name="addressPostcode"
-            class="formInput"
-            placeholder="Postcode"
-        />
-        </div>
-
-
-      <!-- System size -->
-      <select name="systemInterest" class="formInput">
-        <option value="">System size</option>
-        <option value="6.6kW">6.6kW</option>
-        <option value="10kW">10kW</option>
-        <option value="13kWPlus">13kW+</option>
-        <option value="maxPossible">Largest possible</option>
-        <option value="notSure">Not sure yet</option>
-      </select>
-
-      <!-- Battery interest -->
-      <select name="batteryInterest" class="formInput">
-        <option value="">Battery interest</option>
-        <option value="yes">Yes, I’m interested in batteries</option>
-        <option value="no">No batteries</option>
-      </select>
+      <input
+        type="text"
+        name="address"
+        class="formInput"
+        placeholder="Address"
+        autocomplete="street-address"
+        required
+      />  
 
       <!-- Preferred install time -->
       <input
         type="text"
         name="preferredInstallTime"
         class="formInput"
-        placeholder="When would you like the system installed? (e.g. next week)"
+        placeholder="How soon would you like it installed? (e.g. This Friday)"
       />
-
-      <!-- Visit date & time -->
-      <label class="formLabel">
-        Preferred site visit date & time
-      </label>
-      <input
-        type="datetime-local"
-        name="preferredVisitDateTime"
-        class="formInput"
-      />
-
-      <!-- Confirmation note -->
-      <p class="visitNote">
-        We will call you as soon as possible to confirm the visit date,
-        time and exact address.
-      </p>
-
+      
       <button type="submit" class="leadFormButton">
         Request Quote
       </button>
     </form>
 
     <p class="leadFormNote">
-      No spam. Local team. Free assessment.
+      Local team. No call centres. We'll contact you shortly.
     </p>
   </div>
 </section>
@@ -143,22 +99,9 @@
     font-size: 15px;
   }
 
-  .formLabel {
-    text-align: left;
-    font-size: 14px;
-    margin-bottom: 6px;
-    opacity: 0.9;
-  }
-
-  .visitNote {
-    font-size: 13px;
-    margin: 8px 0 18px;
-    opacity: 0.9;
-  }
-
   .leadFormButton {
-    background-color: white;
-    color: #ff9800;
+    background-color: rgb(13, 13, 14);
+    color: #ffffff;
     border: none;
     padding: 16px;
     font-size: 16px;

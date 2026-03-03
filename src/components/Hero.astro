@@ -1,48 +1,85 @@
----
----
-
 <section class="hero">
   <div class="hero-content">
-    <h1>Local solar experts in Townsville</h1>
-    <p>
-      Quality residential and commercial solar systems installed fast
-      by a trusted local team.
+    <h1>Solar Done Properly</h1>
+
+    <p><br />
+    Local Townsville solar specialists<br />
+    Built to handle North Queensland heat and cyclones<br />
+    Most systems installed within 1 to 2 weeks<br /><br />
     </p>
 
-    <a href="#lead" class="cta">Get a free solar quote</a>
+    <a href="#lead" class="cta">Book a Free Local Site Visit</a>
   </div>
 </section>
 
 <style>
 .hero {
-  padding: 5rem 1.5rem;
-  background: linear-gradient(135deg, #ff9f1c, #ffbf69);
-  color: #111;
+  position: relative;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/hero.jpg") center / cover no-repeat;
+  filter: brightness(0.6);
+  z-index: 0;
+}
+
+/* Subtle dark gradient for depth */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.65)
+  );
+  z-index: 1;
 }
 
 .hero-content {
-  max-width: 900px;
-  margin: 0 auto;
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 1.5rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+  opacity: 0.95;
 }
 
 .cta {
   display: inline-block;
-  background: #000;
-  color: #fff;
-  padding: 1rem 2rem;
+  background: #f7b500;
+  color: #000;
+  padding: 1rem 2.4rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.cta:hover {
+  background: #ffd24d;
 }
 </style>
-

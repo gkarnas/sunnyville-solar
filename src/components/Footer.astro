@@ -5,11 +5,15 @@ const currentYear = new Date().getFullYear();
 <footer class="siteFooter">
   <div class="footerContent">
     <p class="footerBrand">
-      © {currentYear} Sunnyville Solar
+     2026 Sunnyville Solar
     </p>
 
     <p class="footerText">
       Local solar installers in Townsville, QLD
+    </p>
+
+    <p class="footerContact">
+      Call: <a href="tel:0401846864">0401 846 864</a>
     </p>
   </div>
 </footer>
@@ -35,5 +39,16 @@ const currentYear = new Date().getFullYear();
   .footerText {
     font-size: 14px;
     opacity: 0.8;
+    margin-bottom: 8px;
+  }
+
+  .footerContact a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .footerContact a:hover {
+    text-decoration: underline;
   }
 </style>

@@ -1,0 +1,125 @@
+---
+---
+
+<section class="cheapHero">
+  <div class="container">
+    <h1>Affordable Solar Panels in Townsville – Installed Fast</h1>
+    <p class="sub">
+      Local installer. No sales reps. Better prices because we keep costs low.
+    </p>
+
+    <a href="#quote" class="ctaPrimary">Get a Fast Quote</a>
+  </div>
+</section>
+
+<section class="cheapBenefits">
+  <div class="container">
+    <ul>
+      <li>✓ Competitive pricing</li>
+      <li>✓ Fast installation dates</li>
+      <li>✓ CEC compliant installations</li>
+      <li>✓ Speak directly with the installer</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cheapPricing">
+  <div class="container">
+    <h2>6.6kW Systems From $X,XXX Installed*</h2>
+    <p>*Final price subject to site inspection and system requirements.</p>
+  </div>
+</section>
+
+<section id="quote" class="cheapForm">
+  <div class="container">
+    <h2>Request a Fast Quote</h2>
+
+    <form 
+      name="cheap-lead"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thank-you/"
+    >
+      <input type="hidden" name="form-name" value="cheap-lead" />
+      <input type="hidden" name="bot-field" />
+
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="tel" name="phone" placeholder="Phone number" required />
+      <input type="text" name="address" placeholder="Address" required />
+
+      <button type="submit">Get My Quote</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .cheapHero {
+    background: #ff9800;
+    color: white;
+    padding: 100px 20px;
+  }
+
+  .cheapHero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .sub {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .ctaPrimary {
+    background: black;
+    color: white;
+    padding: 16px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+  .cheapBenefits {
+    padding: 80px 20px;
+  }
+
+  .cheapBenefits ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  .cheapPricing {
+    background: #f5f5f5;
+    padding: 60px 20px;
+  }
+
+  .cheapForm {
+    padding: 80px 20px;
+  }
+
+  .cheapForm input {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 14px;
+  }
+
+  .cheapForm button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>

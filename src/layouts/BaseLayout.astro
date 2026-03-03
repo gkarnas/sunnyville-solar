@@ -5,11 +5,24 @@ const { title = "Sunnyville Solar" } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <script is:inline>
+      (function(){
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-E7JCWS6D9G";
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+
+        gtag('js', new Date());
+        gtag('config', 'G-E7JCWS6D9G');
+      })();
+    </script>
   </head>
+
   <body>
     <slot />
-  </body>
+  </body>  
 </html>

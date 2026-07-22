@@ -56,10 +56,26 @@ import Footer from "../components/Footer.astro";
       <input type="hidden" name="form-name" value="battery-lead" />
       <input type="hidden" name="bot-field" />
 
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="tel" name="phone" placeholder="Phone number" required />
-      <input type="text" name="address" placeholder="Address" required />
-      <input type="text" name="existingSystem" placeholder="Do you already have solar?" />
+      <input type="text"
+        name="name"
+        class="formInput"
+        placeholder="Name"
+        required />
+      <input type="tel"
+        name="phone"
+        class="formInput"
+        placeholder="Phone number"
+        required />
+      <input type="text"
+        name="address"
+        class="formInput"
+        placeholder="Address"
+        autocomplete="street-address"
+        required />
+      <input type="text"
+        name="preferredInstallTime"
+        class="formInput"
+        placeholder="How soon would you like it installed? (e.g. This Friday)" />
 
       <button type="submit">Book My Assessment</button>
     </form>
@@ -68,7 +84,8 @@ import Footer from "../components/Footer.astro";
 
 <style>
   .container {
-    max-width: 1000px;
+    max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
